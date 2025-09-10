@@ -1,0 +1,48 @@
+{
+  "ai_autocorrect_config": {
+    "name": "AI-Powered Autocorrect Tool",
+    "version": "1.0.0",
+    "description": "A sophisticated web-based autocorrect tool that corrects spelling errors using statistical NLP techniques",
+    "settings": {
+      "max_edit_distance": 2,
+      "max_candidates": 5,
+      "min_word_length": 3,
+      "chart_top_n_words": 20,
+      "api_endpoint": "/correct",
+      "default_language": "english"
+    },
+    "supported_languages": [
+      {
+        "code": "en",
+        "name": "English",
+        "dataset": "word_frequencies.csv"
+      }
+    ],
+    "ui_config": {
+      "theme": {
+        "primary_color": "#2563eb",
+        "secondary_color": "#059669",
+        "background_color": "#f3f4f6"
+      },
+      "text_area": {
+        "rows": 10,
+        "placeholder": "Type or paste your text here..."
+      },
+      "buttons": {
+        "correct_text": "Correct Text",
+        "copy_text": "Copy to Clipboard"
+      }
+    },
+    "algorithm_details": {
+      "preprocessing": "nltk.word_tokenize",
+      "distance_metric": "levenshtein",
+      "ranking_method": "edit_distance_and_frequency"
+    },
+    "example_texts": [
+      "Ths is an exmple of text with som spelling erors.",
+      "I hav a dreem that one day this nation will rise up.",
+      "The qick brown fox jmps ovr the lazy dog.",
+      "Artifishal intelgence is transformng our world."
+    ]
+  }
+}
