@@ -16,7 +16,7 @@ autocorrect = None
 @app.before_first_request
 def initialize():
     global autocorrect
-    autocorrect = Autocorrect('word_frequencies.csv')
+    autocorrect = Autocorrect('Word.csv')
     autocorrect.generate_chart()
 
 @app.route('/')
