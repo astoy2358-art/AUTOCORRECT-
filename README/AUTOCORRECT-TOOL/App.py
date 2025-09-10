@@ -37,5 +37,9 @@ def correct_text():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/config.json')
+def serve_config():
+    return send_from_directory('.', 'config.json')
+    
 if __name__ == '__main__':
     app.run(debug=True)
