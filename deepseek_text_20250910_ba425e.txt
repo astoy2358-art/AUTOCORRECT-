@@ -1,6 +1,0 @@
-stock_prediction/
-│
-├── stock_data_large.csv          # Generated large dataset
-├── stock_predictor.py           # Main prediction script
-├── requirements.txt             # Dependencies
-└── README.md                   # Instructions
