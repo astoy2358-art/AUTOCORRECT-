@@ -15,8 +15,8 @@ except LookupError:
     nltk.download('punkt')
 
 class Autocorrect:
-    def __init__(self):
-        self.df = pd.read_csv("Word.csv")
+    def __init__(self,csv_path):
+        self.df = pd.read_csv("csv_path")
         self.words = set(self.df['word'].str.lower())
         self.word_freq = dict(zip(self.df['word'].str.lower(), self.df['frequency']))
         
